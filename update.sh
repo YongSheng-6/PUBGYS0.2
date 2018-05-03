@@ -26,8 +26,7 @@ cd libpcap-1.8.1
 make
 make install
 
-git clone https://github.com/YongSheng-6/PUBGYS0.2
-cd leida/
+git clone https://github.com/YongSheng-6/PUBGYS0.2cd leida/
 npm i
 npm i -g pino
 npm install -g forever
