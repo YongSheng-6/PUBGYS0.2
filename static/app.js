@@ -1,6 +1,6 @@
 const appData = {
   autoRefresh: true,
-  refreshInterval: Math.floor(1000 / 30),
+  refreshInterval: Math.floor(1000 / 40),
   gsTime: 0,
   me: [-1, -1, 0, 0],
   meGuid: -1,
@@ -51,22 +51,22 @@ vapp = new Vue({
     showDrink: true,
     showGrenade: true,
     showSmokeBomb: false,
-    showAmmo556: false,
-    showAmmo762: false,
-    showForeGrip: true,
-    showLowST: false,
+    showAmmo556: true,
+    showAmmo762: true,
+    showForeGrip: false,
+    showLowST: true,
     showHighST: true,
-    showARCnFH: false,
+    showARCnFH: true,
     showARSuppressor: true,
-    showARExtended: false,
+    showARExtended: true,
     showARStock: false,
     showSRFlashHider: false,
-    showSRSuppressor: true,
+    showSRSuppressor: false,
     showSRExtended: false,
     showSRStock: false,
     showM16A4: true,
     showSCAR: true,
-    showAK47: false,
+    showAK47: true,
     showHK416: true,
     showPan: true,
     showMini14: false,
@@ -129,7 +129,9 @@ vapp = new Vue({
         flags |= 0b00000000000000000000001000000000
       }
        if (this.showForeGrip) {
-        flags |= 0b00000000000000000000000000000001
+
+        flags |= 0b10000000000000000000000000000000
+  
       }
       if (this.showLowST) {
         flags |= 0b00000000010000000000000000000000
@@ -199,7 +201,7 @@ vapp = new Vue({
       }
     },
     setFPS (fps) {
-      appData.refreshInterval = Math.floor(1000 / 30)
+      appData.refreshInterval = Math.floor(1000 / 40)
     },
     showNoItems () {
       this.showItemAll = this.showItemDuoDuo = this.showItemTop = this.showItemBasic = this.showItemAR = this.showItemSR = this.showItemHealth = this.showItemThrow = this.showItemAmmo = this.showItemAll = false
