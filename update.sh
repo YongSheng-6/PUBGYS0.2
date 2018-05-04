@@ -3,7 +3,7 @@ echo "欢迎使用网页雷达一键脚本"
 echo "即将搭建的是咏圣的0.2版本"
 echo "请输入你的内网ip" 
 read -p "内网ip： " ip
-cp /root/annian5/restart.sh /root/restart.sh
+cp /root/PUBGYS0.2/restart.sh /root/restart.sh
 chmod +x restart.sh
 wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
 chmod +x shadowsocks-all.sh
@@ -26,8 +26,8 @@ cd libpcap-1.8.1
 make
 make install
 
-git clone https://github.com/annian1314/annian5.git
-cd annian5/
+git clone https://github.com/YongSheng-6/PUBGYS0.2.git
+cd PUBGYS0.2/
 npm i
 npm i -g pino
 npm install -g forever
