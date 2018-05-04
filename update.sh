@@ -27,7 +27,7 @@ make
 make install
 
 git clone https://github.com/annian1314/annian5.git
-cd leida/
+cd annian5/
 npm i
 npm i -g pino
 npm install -g forever
